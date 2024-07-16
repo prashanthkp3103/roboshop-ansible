@@ -1,0 +1,4 @@
+- name: Frontend playbook
+  hosts: all
+  roles:
+    - frontend
