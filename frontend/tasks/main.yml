@@ -23,6 +23,12 @@
 #    name: nginx
 #    enabled: true
 
+#get a task from another role
+- name: Run tasks/other.yaml instead of 'main'
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: app-prereq
+
 - name: Start Nginx Service
   ansible.builtin.systemd_service:
     state: restarted
