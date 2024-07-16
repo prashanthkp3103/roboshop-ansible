@@ -1,8 +1,2 @@
-- name: Adding Roboshop user
-  ansible.builtin.user:
-    name: Roboshop
 
-- name: Remove the default content that web server is serving
-  ansible.builtin.file:
-    path: "{{ app_path }}" # this variable
 
