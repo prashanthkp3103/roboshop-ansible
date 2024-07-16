@@ -6,7 +6,7 @@
 
 #installation dnf supports
 
-- name: Install the latest version of Apache
+- name: Install the latest version of nginx
   ansible.builtin.dnf:
     name: nginx
     state: latest
@@ -16,7 +16,13 @@
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
 
-- name: Make sure a nginx service unit is running on boot
+#- name: Make sure a nginx service unit is running on boot
+#  ansible.builtin.systemd_service:
+#    state: restarted
+#    name: nginx
+#    enabled: true
+
+- name: Start Nginx Service
   ansible.builtin.systemd_service:
     state: restarted
     name: nginx
