@@ -2,4 +2,4 @@
 #  ansible.builtin.shell: set-prompt {{component}}-{{env}}
 
 - name: Set Prompt
-  ansible.builtin.shell: systemctl set-hostname {{component}}-{{env}}-ppk
+  ansible.builtin.shell: hostnamectl set-hostname {{component}}-{{env}}-ppk
