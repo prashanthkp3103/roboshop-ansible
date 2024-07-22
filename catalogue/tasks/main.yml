@@ -18,4 +18,4 @@
     state: latest
 
 - name: Load Master Data of the List of products we want to sell and their quantity information also there in the same master data
-  ansible.builtin.shell: mongosh --host 172.31.23.251 </app/db/master-data.js
+  ansible.builtin.shell: mongosh --host mongodb.dev.meppk.xyz </app/db/master-data.js
