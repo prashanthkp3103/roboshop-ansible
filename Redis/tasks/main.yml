@@ -11,15 +11,21 @@
     name: redis
     state: latest
 
-
+#here we are replacing word
 - name: search and replace Redis config file 127.0.0.1 to 0.0.0.0
   ansible.builtin.replace:
     path: /etc/redis/redis.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
-- name: Start Mongodb Service
+- name: search and replace Redis config file protected mode
+  ansible.builtin.lineinfile:
+    path: /etc/redis/redis.conf
+    regexp: 'protected-mode'
+    line: protected-mode no
+
+- name: Start Redis Service
   ansible.builtin.systemd_service:
     state: restarted
-    name: mongod
+    name: redis
     enabled: true
