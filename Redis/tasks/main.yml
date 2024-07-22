@@ -18,7 +18,8 @@
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
-- name: search and replace Redis config file protected mode
+#here we are replacing line
+- name: Redis config file - Update Protect Mode
   ansible.builtin.lineinfile:
     path: /etc/redis/redis.conf
     regexp: 'protected-mode'
