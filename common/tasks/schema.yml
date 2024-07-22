@@ -9,7 +9,7 @@
     state: latest
 
 - name: Load Master Data
-  ansible.builtin.shell: mongosh --host mongo.{{ env }}.meppk.xyz </app/db/master-data.js
+  ansible.builtin.shell: mongosh --host 172.31.23.251 </app/db/master-data.js
 
 
 #- name: Load MySQL schema
