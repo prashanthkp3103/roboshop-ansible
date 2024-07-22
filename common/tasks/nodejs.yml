@@ -29,8 +29,8 @@
   ansible.builtin.include_role:
     name: common
     tasks_from: schema
-  when: schema_setup is defined
-
+    when: schema_setup is defined
+    #schema_setup this is variable
 #get a task from another role
 - name: SystemD service
   ansible.builtin.include_role:

@@ -2,7 +2,7 @@
   ansible.builtin.user:
     name: roboshop
 
-- name: Remove the default content that web server is serving.
+- name: Remove the default content that serving.
   ansible.builtin.file:
     path: "{{ app_path }}"
     state: absent
@@ -19,7 +19,7 @@
 
 
 #Download frontend code and extract zip file ansible module
-- name: Download frontend code and extract zip file ansible module
+- name: Download code and extract zip file ansible module
   ansible.builtin.unarchive:
     src: https://roboshop-artifacts.s3.amazonaws.com/{{component}}-v3.zip
     dest: "{{ app_path }}"
