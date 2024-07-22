@@ -15,7 +15,7 @@
 - name: App Prereqs -- User- Create DIR-Download app code
   ansible.builtin.include_role:
     name: common
-    tasks_from: app-prereq
+    tasks_from: app-prereq.yml
 
 - name: Start Nginx service
   ansible.builtin.systemd_service:
