@@ -2,5 +2,7 @@
   hosts: all
   become: true
   roles:
-    - "{{ role_name }}"     # this command line argument
+    - "{{ role_name }}"
+
+  # this command line argument
 
